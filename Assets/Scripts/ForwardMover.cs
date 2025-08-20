@@ -4,8 +4,8 @@ public class ForwardMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
 
-    void Update()
+    private void Update()
     {
-        transform.Translate(Vector3.forward * _moveSpeed * Time.deltaTime);
+        transform.Translate(transform.forward * _moveSpeed * Time.deltaTime, Space.World);
     }
 }
